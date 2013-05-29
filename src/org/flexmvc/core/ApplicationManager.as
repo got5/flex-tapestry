@@ -78,6 +78,9 @@ package org.flexmvc.core
         
         //Sets symbol constants values.
         module.contributeApplicationDefaults(_symbolConstants);
+        
+        //Services registration.
+        ServiceManager.registerModuleServices(module);
       }
     }
     

@@ -14,6 +14,7 @@ See demo project **techforum-flex**: https://github.com/got5/techforum-flex
  
  - Low level of coupling between views/controllers/model.
  - Controllers are simple Flex classes and don't extend any core class or to implement any interface.
+ - Thanks to metadatas, your controller do not need to manipulate any component class.
 
 ### Dependency injection in controllers (and later in services/modules):
 
@@ -31,6 +32,16 @@ See demo project **techforum-flex**: https://github.com/got5/techforum-flex
 
 	[Component]
 	public var txtSearch:TextInput;
+	
+ - View component properties:
+
+	[ComponentProperty(component='txtLogin', property='text')]
+	public var login:String;
+	
+OR, with naming conventions:
+
+	[ComponentProperty]
+	public var text_txtLogin:String;
 
 ### Metadatas to set event listeners in the controller:
 

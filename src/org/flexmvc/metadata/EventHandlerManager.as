@@ -136,7 +136,7 @@ package org.flexmvc.metadata
       } else if (pResult is DestinationViewVO) {
         var destination:DestinationViewVO = pResult as DestinationViewVO;
         ApplicationManager.application.navigator.pushView(destination.viewClass, destination.data, destination.context, destination.transition);
-      } else {
+      } else if (pResult != null) {
         throw new MetadataError("Unhandled return result : " + pResult);
       }
     }

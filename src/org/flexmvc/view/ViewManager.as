@@ -48,6 +48,10 @@ package org.flexmvc.view
               break;
             case MetadataConstants.COMPONENT:
               InjectManager.manageComponent(pController, variable.@name, variable.@type, pView);
+              break;
+            case MetadataConstants.COMPONENT_PROPERTY:
+              InjectManager.manageComponentProperty(pController, variable.@name, variable.@type, pView, metadata);
+              break;
             default:
               break;
           }

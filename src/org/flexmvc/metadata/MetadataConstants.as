@@ -5,9 +5,7 @@ package org.flexmvc.metadata
   {
     // Variables metadatas //
     
-    // TODO : [ComponentProperty(component='inputName', property='text')]
-    
-    /** Dependcy injection */
+    /** Dependency injection */
     public static const INJECT:String = 'Inject';
     
     /** Used to inject SymbolConstants values in controller variables. */
@@ -15,6 +13,10 @@ package org.flexmvc.metadata
     
     /** Used to link a controller variable to a view component. */
     public static const COMPONENT:String = 'Component';
+    
+    // TODO : [ComponentProperty(component='inputName', property='text')]
+    /** Used to link a controller variable to a view component property value. */
+    public static const COMPONENT_PROPERTY:String = 'ComponentProperty';
     
     // Functions metadatas //
     
