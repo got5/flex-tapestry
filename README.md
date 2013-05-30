@@ -13,7 +13,7 @@ See demo project **techforum-flex**: https://github.com/got5/techforum-flex
 ### MVC pattern.
  
  - Low level of coupling between views/controllers/model.
- - Controllers are simple Flex classes and don't extend any core class or to implement any interface.
+ - Controllers are simple Flex classes and don't extend any core class or implement any interface.
  - Thanks to metadatas, your controller do not need to manipulate any component class.
 
 ### Dependency injection in controllers (and later in services/modules):
