@@ -14,9 +14,11 @@ package org.flexmvc.metadata
     /** Used to link a controller variable to a view component. */
     public static const COMPONENT:String = 'Component';
     
-    // TODO : [ComponentProperty(component='inputName', property='text')]
     /** Used to link a controller variable to a view component property value. */
     public static const COMPONENT_PROPERTY:String = 'ComponentProperty';
+    
+    /** Used to save a variable value during user navigation. */
+    public static const PERSIST:String = 'Persist';
     
     // Functions metadatas //
     

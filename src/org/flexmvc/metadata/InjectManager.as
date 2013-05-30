@@ -1,11 +1,12 @@
 package org.flexmvc.metadata
 {
-  import avmplus.getQualifiedClassName;
-  
+  import flash.utils.describeType;
   import flash.utils.getDefinitionByName;
   
   import mx.binding.utils.BindingUtils;
   import mx.core.UIComponent;
+  
+  import avmplus.getQualifiedClassName;
   
   import org.flexmvc.core.ApplicationManager;
   import org.flexmvc.core.ServiceManager;
@@ -33,6 +34,10 @@ package org.flexmvc.metadata
         var serviceImplClass:Class = ServiceManager.getService(serviceInterfaceClass);
         if (serviceImplClass != null) {
           var serviceImplInstance:Object = new serviceImplClass();
+          
+          //Handlers depdency injections in the service.
+          MetadataManager.manageBean(serviceImplInstance);
+          
           if (!(serviceImplInstance is serviceInterfaceClass)) {
             throw new MetadataError("Service implementation '" + serviceImplClass + "' does not implement interface '" + serviceInterfaceClass + "'.");
           }
