@@ -6,7 +6,7 @@ This library main goal is to offer the same features the framework tapestry offe
  
 ## Demo
  
-See demo project **techforum-flex**: https://github.com/got5/techforum-flex
+See demo project *techforum-flex*: https://github.com/got5/techforum-flex
  
 ## Features
  
@@ -18,30 +18,30 @@ See demo project **techforum-flex**: https://github.com/got5/techforum-flex
 
 ### Dependency injection in controllers (and later in services/modules):
 
- - *Services injection*:
+ - **Services injection**:
 
 You can use services, defined in your application module, just by adding a variable of its type in your controller. You do not need to instanciate it, the framework will do it for you. A service in *Flex-tapestry* is composed of an interface and its implementation. Interfaces are always used in controllers, not implementations.
  
 	[Inject]
 	public var userService:IUserService;
 
- - Constants injection:
+ - **Constants injection**:
 
 *Flex-tapestry* uses several constants (such as production-mode, ...), and you can define your own constants as well in your application module. To use them in your controllers, simply use the metadata *Symbol*.
 
 	[Symbol]
 	public var productionMode:String;
 
- - View components:
+ - **View components**:
 
 View components can be used in controllers, by using the metadata *Component*. The variable name has to be the same as the component id.
 
 	[Component]
 	public var txtSearch:TextInput;
 	
- - View component properties:
+ - **View component properties**:
 
-View component properties can be linked to controller variables. For example, you could define a variable which should be linked to the property *text* of a *TextInput* component in your view.
+View component properties can be linked to controller variables. For example, you could define a variable which linked to the property *text* of a *TextInput* component in your view:
 
 	[ComponentProperty(component='txtLogin', property='text')]
 	public var login:String;
@@ -51,14 +51,14 @@ OR, with naming conventions:
 	[ComponentProperty]
 	public var text_txtLogin:String;
 
-Note: If no component is defined, the property will be searched directly in the view component. For example, if you want to get the property *data* of your view:
+*Note*: If no component is defined, the property will be searched directly in the view component. For example, if you want to get the property *data* of your view:
 
 	[ComponentProperty(property='data')]
 	public var currentProduct:Product;
 	
 ### Metadatas to set event listeners in the controller:
 
- - Initialization methods:
+ - **Initialization methods**:
 
 Used to call a controller function when the related view is initialized.
 
@@ -67,7 +67,7 @@ Used to call a controller function when the related view is initialized.
 		...
 	}
 	
- - Cleanup methods:
+ - **Cleanup methods**:
 
 Used to call a controller function when the related view is deactivated.
 
@@ -76,7 +76,7 @@ Used to call a controller function when the related view is deactivated.
 		...
 	}
 
- - Listeners on component events:
+ - **Listeners on component events**:
 
 Used to call functions when an event is dispatched by a view component. For example, if you want to listen the *click* event on the button *btnSearch*:
 
