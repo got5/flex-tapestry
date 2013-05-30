@@ -16,18 +16,18 @@ See demo project *techforum-flex*: https://github.com/got5/techforum-flex
  - Controllers are simple Flex classes and don't extend any core class or implement any interface.
  - Thanks to metadatas, your controller do not need to manipulate any component class.
 
-### Dependency injection in controllers (and later in services/modules):
+### Dependency injection in controllers/services:
 
  - **Services injection**:
 
-You can use services, defined in your application module, just by adding a variable of its type in your controller. You do not need to instanciate it, the framework will do it for you. A service in *Flex-tapestry* is composed of an interface and its implementation. Interfaces are always used in controllers, not implementations.
+You can use services, defined in your application module, just by adding a variable of its type in your controller/service. You do not need to instanciate it, the framework will do it for you. A service in *Flex-tapestry* is composed of an interface and its implementation. Interfaces are always used in controllers, not implementations.
  
 	[Inject]
 	public var userService:IUserService;
 
  - **Constants injection**:
 
-*Flex-tapestry* uses several constants (such as production-mode, ...), and you can define your own constants as well in your application module. To use them in your controllers, simply use the metadata *Symbol*.
+*Flex-tapestry* uses several constants (such as production-mode, ...), and you can define your own constants as well in your application module. To use them in your controllers/services, simply use the metadata *Symbol*.
 
 	[Symbol]
 	public var productionMode:String;
